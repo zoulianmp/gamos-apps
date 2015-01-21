@@ -6,6 +6,4 @@ source /home/zoulian/Gamos/Gamos5Install/GAMOS.5.0.0/config/confgamos.sh
 
 buildG4DICOM --help
 
-source /home/zoulian/Gamos/GamosSim/builddicom.sh
-
 #source /home/zoulian/Gamos/GamosSim/tutorialsrun.sh

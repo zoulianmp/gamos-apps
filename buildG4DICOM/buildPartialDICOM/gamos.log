@@ -1,0 +1,116 @@
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 0 = 0 mate G4_AIR
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 1 = 1 mate G4_LUNG_ICRP
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 2 = 2 mate G4_TISSUE_SOFT_ICRP
+GmReadPhantomG4Geometry::ReadPhantomData reading nmate 3 = 3 mate G4_BONE_CORTICAL_ICRP
+GmReadPhantomG4Geometry::ReadPhantomData nVoxel X/Y/Z 64 64 39
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimX 7.8125 offsetX -250
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimY 7.8125 offsetY -250
+GmReadPhantomG4Geometry::ReadPhantomData voxelDimZ 5 offsetZ -95
+GmEMPhysicsList::AddPhysicsList:DEFAULT = gamma-lowener is registered
+GmEMPhysicsList::AddPhysicsList: DEFAULT = electron-lowener is registered
+GmEMPhysicsList::AddPhysicsList: DEFAULT = positron-standard is registered
+
+phot:   for  gamma    SubType= 12
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric :   Emin=        0 eV       Emax=          1 GeV
+       PhotoElectric :   Emin=        1 GeV      Emax=         10 TeV
+
+compt:   for  gamma    SubType= 13
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+    LivermoreCompton :   Emin=        0 eV       Emax=          1 GeV
+       Klein-Nishina :   Emin=        1 GeV      Emax=         10 TeV
+
+conv:   for  gamma    SubType= 14
+      Lambda tables from 1.022 MeV to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermoreConversion :   Emin=        0 eV       Emax=          1 GeV
+        BetheHeitler :   Emin=        1 GeV      Emax=         10 TeV
+
+Rayl:   for  gamma    SubType= 11
+      Lambda tables from 100 eV  to 10 TeV in 200 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh :   Emin=        0 eV       Emax=          1 GeV
+   LivermoreRayleigh :   Emin=        1 GeV      Emax=        100 GeV
+
+msc:   for e-    SubType= 10
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      RangeFactor= 0.04, step limit type: 2, lateralDisplacement: 1, skin= 1, geomFactor= 2.5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc93 :   Emin=        0 eV       Emax=         10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       LowEnergyIoni :   Emin=        0 eV       Emax=        100 GeV
+        MollerBhabha :   Emin=      100 GeV      Emax=         10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           LowEnBrem :   Emin=        0 eV       Emax=        100 GeV
+            eBremLPM :   Emin=      100 GeV      Emax=         10 TeV  AngularGenUrban
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :   Emin=        0 eV       Emax=         10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV in 77 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               eBrem :   Emin=        0 eV       Emax=          1 GeV  AngularGenUrban
+            eBremLPM :   Emin=        1 GeV      Emax=         10 TeV  AngularGenUrban
+
+annihil:   for  e+    SubType= 5
+      Lambda tables from 100 eV  to 10 TeV in 77 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :   Emin=        0 eV       Emax=         10 TeV
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_AIR
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 0 fm 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_LUNG_ICRP
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 0 fm 
+ Energy thresholds :  gamma  1.13241 keV    e-  86.9654 keV    e+  86.0932 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_TISSUE_SOFT_ICRP
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 0 fm 
+ Energy thresholds :  gamma  1.08766 keV    e-  84.6589 keV    e+  83.5287 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes     recalculation needed : No 
+ Material : G4_BONE_CORTICAL_ICRP
+ Range cuts        :  gamma  100 um     e-  100 um     e+  100 um  proton 0 fm 
+ Energy thresholds :  gamma  1.77641 keV    e-  113.785 keV    e+  111.514 keV proton -1 MeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+Start Run processing.
+Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=0s Real=0s Sys=0s
+Graphics systems deleted.
+Visualization Manager deleting...
